@@ -20,5 +20,5 @@ public interface ServerI {
 	@WebMethod boolean getAllUsers() throws Exception;
 	@WebMethod boolean addProductToUser(AbstractItem item, User user, int qty) throws Exception;
 	@WebMethod boolean addToResults(User user,AbstractItem item) throws Exception;
-	
+	//hej
 }
