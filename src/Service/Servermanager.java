@@ -175,13 +175,6 @@ public class Servermanager {
     	current.addToSafe(item, qty);
     }
 
-    /***********************************
-     * This method adds to the results *
-     ***********************************/
-
-    public void addToResults(AbstractItem item) {
-    	current.addToResults(item);
-    }
 
 
     public void setFirstRun(Boolean firstRun){

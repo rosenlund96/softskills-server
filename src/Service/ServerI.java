@@ -21,7 +21,7 @@ public interface ServerI {
 	@WebMethod boolean deleteGroup(String name) throws Exception;
 	@WebMethod ArrayList<User> getAllUsers() throws Exception;
 	@WebMethod void addProductToUser(AbstractItem item, User user, int qty) throws Exception;
-	@WebMethod void addToResults(User user,AbstractItem item) throws Exception;
+	//@WebMethod void addToResults(User user,AbstractItem item) throws Exception;
 	@WebMethod void setName(String newName, String newSurName) throws Exception;
 	@WebMethod String getName() throws Exception;
 	@WebMethod String getSurName() throws Exception;
