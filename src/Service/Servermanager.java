@@ -75,138 +75,138 @@ public class Servermanager {
 	}
 	
 	// Alle metoder fra User
-	public void setName(String newName, String newSurName) {
-		current.setName(newName, newSurName);
+	public void setName(String newName, String newSurName, User user) {
+		manager.setName(newName, newSurName, user);
     }
 
     /***************************************
      * This method gets the name of a user *
      ***************************************/
 
-    public String getName() {
-    	return current.getName();
+    public String getName(User user) {
+    	return manager.getName(user);
     }
 
     /******************************************
      * This method gets the surname of a user *
      ******************************************/
 
-    public String getSurName() {
-    	return current.getSurName();
+    public String getSurName(User user) {
+    	return manager.getSurName(user);
     }
 
     /****************************************
      * This method sets the email of a user *
      ****************************************/
 
-    public void setEmail(String newEmail) {
-    	current.setEmail(newEmail);
+    public void setEmail(String newEmail, User user) {
+    	manager.setEmail(newEmail, user);
     }
 
     /****************************************
      * This method gets the email of a user *
      ****************************************/
 
-    public String getEmail(){
-    	return current.getEmail();
+    public String getEmail(User user){
+    	return manager.getEmail(user);
     }
 
     /**********************************************
      * This method sets the phone number of a user *
      **********************************************/
 
-    public void setRetning(String newRetning){
-    	current.setRetning(newRetning);
+    public void setRetning(String newRetning, User user){
+    	manager.setRetning(newRetning, user);
     }
 
     /**********************************************
      * This method gets the phone number of a user *
      **********************************************/
 
-    public String getRetning(){
-    	return current.getRetning();
+    public String getRetning(User user){
+    	return manager.getRetning(user);
     }
 
     /*********************************
      * This method gets and the safe *
      *********************************/
 
-    public List<AbstractItem> retrieveSafeObjects() {
-		return current.retrieveSafeObjects();
+    public List<AbstractItem> retrieveSafeObjects(User user) {
+		return manager.retrieveSafeObjects(user);
     }
 
     /*****************************
      * This method gets the safe *
      *****************************/
 
-    public Safe getSafe() {
-    	return current.getSafe();
+    public Safe getSafe(User user) {
+    	return manager.getSafe(user);
     }
 
     /*****************************
      * This method sets the safe *
      *****************************/
 
-    public void setSafe(Safe safe) {
-        current.setSafe(safe);
+    public void setSafe(Safe safe, User user) {
+    	manager.setSafe(safe, user);
     }
 
-    public void setfullName(){
-        current.setfullName();
+    public void setfullName(User user){
+    	manager.setfullName(user);
     }
 
     /******************************************
      * This method gets the results of a user *
      ******************************************/
 
-    public List<AbstractItem> hentResults() {
-    	return current.hentResults();
+    public List<AbstractItem> hentResults(User user) {
+    	return manager.hentResults(user);
     }
     
-    public String getFullName(){
-        return current.getFullName();
+    public String getFullName(User user){
+        return manager.getFullName(user);
     }
 
     /*********************************************
      * This method adds bought tests to the safe *
      *********************************************/
 
-    public void addToSafe(AbstractItem item, int qty){
-    	current.addToSafe(item, qty);
+    public void addToSafe(AbstractItem item, int qty, User user){
+    	manager.addToSafe(item, qty, user);
     }
 
 
 
-    public void setFirstRun(Boolean firstRun){
-    	current.setFirstRun(firstRun);
+    public void setFirstRun(Boolean firstRun, User user){
+    	manager.setFirstRun(firstRun, user);
     }
     
-    public boolean getFirstRun(){
-        return current.getFirstRun();
+    public boolean getFirstRun(User user){
+        return manager.getFirstRun(user);
     }
 
-    public boolean getAdministrativ() {
-        return current.getAdministrativ();
+    public boolean getAdministrativ(User user) {
+        return manager.getAdministrativ(user);
     }
 
-    public boolean getNotifikationer() {
-        return current.getNotifikationer();
+    public boolean getNotifikationer(User user) {
+        return manager.getNotifikationer(user);
     }
 
-    public boolean getInverter() {
-        return current.getInverter();
+    public boolean getInverter(User user) {
+        return manager.getInverter(user);
     }
 
-    public void setAdministrativ(boolean administrativ) {
-        current.setAdministrativ(administrativ);
+    public void setAdministrativ(boolean administrativ, User user) {
+    	manager.setAdministrativ(administrativ, user);
     }
 
-    public void setNotifikationer(boolean notifikationer) {
-        current.setNotifikationer(notifikationer);
+    public void setNotifikationer(boolean notifikationer, User user) {
+    	manager.setNotifikationer(notifikationer, user);
     }
 
-    public void setInverter(boolean inverter) {
-    	current.setInverter(inverter);
+    public void setInverter(boolean inverter, User user) {
+    	manager.setInverter(inverter, user);
     }
 	
 }
