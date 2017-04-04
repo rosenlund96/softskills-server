@@ -22,7 +22,7 @@ public class Safe {
     public static Safe sSafe;
 
 
-    /** Nødvendigt med konsteruktør uden parametre for at objektet kan instantieres fra JSON */
+    /** Nï¿½dvendigt med konsteruktï¿½r uden parametre for at objektet kan instantieres fra JSON */
     public Safe() {
     }
 
@@ -92,13 +92,13 @@ public class Safe {
             case DISC:
                 for (int i = 1; i <= qty; i++) {
                     unusedDiscItems.add((DISC) item);
-                    System.out.println("Der blev tilføjet til unusedDisc");
+                    System.out.println("Der blev tilfï¿½jet til unusedDisc");
                 }
                 break;
             case BELBIN:
                 for (int i = 1; i <= qty; i++) {
                     unusedBelbinItems.add((BELBIN) item);
-                    System.out.println("Der blev tilføjet til unusedBelbin");
+                    System.out.println("Der blev tilfï¿½jet til unusedBelbin");
                 }
                 break;
 
@@ -147,7 +147,7 @@ public class Safe {
      * This method gets an unused item from the safe *
      ********************************************/
 
-    public List<AbstractItem> læsUnusedItems() {
+    public List<AbstractItem> lÃ¦sUnusedItems() {
         ArrayList<AbstractItem> res = new ArrayList<>();
         res.addAll(unusedBelbinItems);
         res.addAll(unusedDiscItems);
@@ -162,7 +162,7 @@ public class Safe {
 
 
 
-    public void sætUnusedItems(List<AbstractItem> Unused){
+    public void sÃ¦tUnusedItems(List<AbstractItem> Unused){
        for (int i = 0; i < Unused.size();i++){
             switch (Unused.get(i).getTestType()){
                 case DISC:
@@ -186,7 +186,7 @@ public class Safe {
     }
 
 
-    public void sætUsedItems(List<AbstractItem> used){
+    public void sÃ¦tUsedItems(List<AbstractItem> used){
         for (int i = 0; i < used.size();i++){
             switch (used.get(i).getTestType()){
                 case DISC:
@@ -224,7 +224,7 @@ public class Safe {
 
 
     public int getSafeSize(){
-        return læsUnusedItems().size();
+        return lÃ¦sUnusedItems().size();
     }
 
 

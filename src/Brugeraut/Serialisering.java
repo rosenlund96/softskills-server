@@ -11,19 +11,19 @@ public class Serialisering
 	public static void gem(Serializable obj, String filnavn) throws IOException
 	{
 		System.out.println("Gemmer filen "+filnavn);
-		FileOutputStream datastrøm = new FileOutputStream(filnavn);
-		ObjectOutputStream objektstøm = new ObjectOutputStream(datastrøm);
-		objektstøm.writeObject(obj);
-		objektstøm.close();
+		FileOutputStream datastrÃ¸m = new FileOutputStream(filnavn);
+		ObjectOutputStream objektstÃ¸m = new ObjectOutputStream(datastrÃ¸m);
+		objektstÃ¸m.writeObject(obj);
+		objektstÃ¸m.close();
 	}
 
 	public static Serializable hent(String filnavn) throws Exception
 	{
 		System.out.println("IndlÃ¦ser filen "+filnavn);
-		FileInputStream datastrøm = new FileInputStream(filnavn);
-		ObjectInputStream objektstrøm = new ObjectInputStream(datastrøm);
-		Serializable obj = (Serializable) objektstrøm.readObject();
-		objektstrøm.close();
+		FileInputStream datastrÃ¸m = new FileInputStream(filnavn);
+		ObjectInputStream objektstrÃ¸m = new ObjectInputStream(datastrÃ¸m);
+		Serializable obj = (Serializable) objektstrÃ¸m.readObject();
+		objektstrÃ¸m.close();
 		return obj;
 	}
 }

@@ -8,6 +8,7 @@ import javax.xml.ws.Service;
 
 import Controllers.Groupmanager;
 import Controllers.Usermanager;
+import Entities.User;
 import Brugerautorisation.data.Bruger;
 import Brugerautorisation.transport.Brugeradmin;
 
@@ -15,6 +16,7 @@ import Brugerautorisation.transport.Brugeradmin;
 @WebService(endpointInterface = "Service.ServerI")
 public class Servermanager {
 
+	Bruger b = null;
 	
 	public Servermanager(){
 		Usermanager manager = new Usermanager();
@@ -22,17 +24,24 @@ public class Servermanager {
 		
 	}
 	
-	public boolean login(String bruger, String adgangskode) throws Exception {
+	public User login(String bruger, String adgangskode) throws Exception {
         URL url = new URL("http://javabog.dk:9901/brugeradmin?wsdl");
         QName qname = new QName("http://soap.transport.brugerautorisation/", "BrugeradminImplService");
         Service service = Service.create(url, qname);
         Brugeradmin ba = service.getPort(Brugeradmin.class);
         
         try {
-    Bruger b = ba.hentBruger(bruger, adgangskode);
+    b = ba.hentBruger(bruger, adgangskode);
 } catch (Throwable e) {
-    return false;
+    return null;
 }
-    return true;
+    User current = new User(b.getName(),b.getLastname(),b.getMail(),b.getRetning());
+    
+    return current;
 }
+	
+	//All methods from Usermanager//
+	
+	//All methods from Groupmanager//
+	
 }

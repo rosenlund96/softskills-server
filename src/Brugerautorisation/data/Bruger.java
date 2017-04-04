@@ -22,4 +22,17 @@ public class Bruger implements Serializable
 	{ 
 		return email;
 	}
+	
+	public String getName(){
+		return this.fornavn;
+	}
+	public String getLastname(){
+		return this.efternavn;
+	}
+	public String getMail(){
+		return this.email;
+	}
+	public String getRetning(){
+		return this.studeretning;
+	}
 }
