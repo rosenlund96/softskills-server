@@ -2,6 +2,7 @@ package Service;
 
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.List;
 
 import javax.jws.WebService;
 import javax.xml.namespace.QName;
@@ -11,6 +12,7 @@ import Controllers.Groupmanager;
 import Controllers.Usermanager;
 import Entities.AbstractItem;
 import Entities.Group;
+import Entities.Safe;
 import Entities.User;
 import Brugerautorisation.data.Bruger;
 import Brugerautorisation.transport.Brugeradmin;
@@ -71,5 +73,147 @@ public class Servermanager {
 	public void addToResults(User user,AbstractItem item) {
 		manager.addToResults(user, item);
 	}
+	
 	// Alle metoder fra User
+	public void setName(String newName, String newSurName) {
+		current.setName(newName, newSurName);
+    }
+
+    /***************************************
+     * This method gets the name of a user *
+     ***************************************/
+
+    public String getName() {
+    	return current.getName();
+    }
+
+    /******************************************
+     * This method gets the surname of a user *
+     ******************************************/
+
+    public String getSurName() {
+    	return current.getSurName();
+    }
+
+    /****************************************
+     * This method sets the email of a user *
+     ****************************************/
+
+    public void setEmail(String newEmail) {
+    	current.setEmail(newEmail);
+    }
+
+    /****************************************
+     * This method gets the email of a user *
+     ****************************************/
+
+    public String getEmail(){
+    	return current.getEmail();
+    }
+
+    /**********************************************
+     * This method sets the phone number of a user *
+     **********************************************/
+
+    public void setRetning(String newRetning){
+    	current.setRetning(newRetning);
+    }
+
+    /**********************************************
+     * This method gets the phone number of a user *
+     **********************************************/
+
+    public String getRetning(){
+    	return current.getRetning();
+    }
+
+    /*********************************
+     * This method gets and the safe *
+     *********************************/
+
+    public List<AbstractItem> retrieveSafeObjects() {
+		return current.retrieveSafeObjects();
+    }
+
+    /*****************************
+     * This method gets the safe *
+     *****************************/
+
+    public Safe getSafe() {
+    	return current.getSafe();
+    }
+
+    /*****************************
+     * This method sets the safe *
+     *****************************/
+
+    public void setSafe(Safe safe) {
+        current.setSafe(safe);
+    }
+
+    public void setfullName(){
+        current.setfullName();
+    }
+
+    /******************************************
+     * This method gets the results of a user *
+     ******************************************/
+
+    public List<AbstractItem> hentResults() {
+    	return current.hentResults();
+    }
+    
+    public String getFullName(){
+        return current.getFullName();
+    }
+
+    /*********************************************
+     * This method adds bought tests to the safe *
+     *********************************************/
+
+    public void addToSafe(AbstractItem item, int qty){
+    	current.addToSafe(item, qty);
+    }
+
+    /***********************************
+     * This method adds to the results *
+     ***********************************/
+
+    public void addToResults(AbstractItem item) {
+    	current.addToResults(item);
+    }
+
+
+    public void setFirstRun(Boolean firstRun){
+    	current.setFirstRun(firstRun);
+    }
+    
+    public boolean getFirstRun(){
+        return current.getFirstRun();
+    }
+
+    public boolean getAdministrativ() {
+        return current.getAdministrativ();
+    }
+
+    public boolean getNotifikationer() {
+        return current.getNotifikationer();
+    }
+
+    public boolean getInverter() {
+        return current.getInverter();
+    }
+
+    public void setAdministrativ(boolean administrativ) {
+        current.setAdministrativ(administrativ);
+    }
+
+    public void setNotifikationer(boolean notifikationer) {
+        current.setNotifikationer(notifikationer);
+    }
+
+    public void setInverter(boolean inverter) {
+    	current.setInverter(inverter);
+    }
+	
 }
