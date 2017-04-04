@@ -17,9 +17,9 @@ public abstract class AbstractItem implements Serializable {
     public enum testType{DISC,BELBIN,THREESIXTY};
     public boolean isUsed, firstRun;
     public testType type;
-    public String owner;
+    private String owner;
     public String productName, description;
-    public String finishedDate, expirationDate;
+    private String finishedDate, expirationDate;
     public int Complete;
 
     public AbstractItem(){

@@ -71,5 +71,5 @@ public class Servermanager {
 	public void addToResults(User user,AbstractItem item) {
 		manager.addToResults(user, item);
 	}
-	// hej med dig
+	// Alle metoder fra User
 }

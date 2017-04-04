@@ -6,20 +6,20 @@ import java.util.List;
 
 public class Safe {
 
-    public List<BELBIN> unusedBelbinItems = new ArrayList<>();
-    public List<BELBIN> usedBelbinItems = new ArrayList<>();
-    public List<THREESIXTY> usedThreeSixtyItems = new ArrayList<>();
+    private List<BELBIN> unusedBelbinItems = new ArrayList<>();
+    private List<BELBIN> usedBelbinItems = new ArrayList<>();
+    private List<THREESIXTY> usedThreeSixtyItems = new ArrayList<>();
 
-    public List<DISC> unusedDiscItems = new ArrayList<>();
-    public List<DISC> usedDiscItems = new ArrayList<>();
-    public List<THREESIXTY> unusedThreeSixtyItems = new ArrayList<>();
+    private List<DISC> unusedDiscItems = new ArrayList<>();
+    private List<DISC> usedDiscItems = new ArrayList<>();
+    private List<THREESIXTY> unusedThreeSixtyItems = new ArrayList<>();
 
 
 
 
     private List<AbstractItem> unusedItems = new ArrayList<>();
     private List<AbstractItem> usedItems = new ArrayList<>();
-    public static Safe sSafe;
+    private static Safe sSafe;
 
 
     /** N�dvendigt med konsterukt�r uden parametre for at objektet kan instantieres fra JSON */

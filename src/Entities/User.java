@@ -4,14 +4,14 @@ import java.util.List;
 
 public class User {
 
-	public String name;
-    public String surName;
-    public String fullName;
-    public String email;
-    public String retning;
-    public Safe safe;
-    public String birth;
-    public boolean firstRun, administrativ, notifikationer, inverter;
+	private String name;
+    private String surName;
+    private String fullName;
+    private String email;
+    private String retning;
+    private Safe safe;
+    private String birth;
+    private boolean firstRun, administrativ, notifikationer, inverter;
     
     
     public User(){
