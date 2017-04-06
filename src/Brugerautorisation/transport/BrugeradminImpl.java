@@ -20,7 +20,7 @@ public class BrugeradminImpl implements Brugeradmin {
 	}
 
 	@Override
-	public Bruger Ã†ndrAdgangskode(String brugernavn, String adgangskode, String nyAdgangskode) {
+	public Bruger ÆndrAdgangskode(String brugernavn, String adgangskode, String nyAdgangskode) {
 		Bruger b = db.hentBruger(brugernavn, adgangskode);
 		b.adgangskode = nyAdgangskode;
 		db.gemTilFil(false);
@@ -50,8 +50,8 @@ public class BrugeradminImpl implements Brugeradmin {
 
 
 	@Override
-	public void setEkstraFelt(String brugernavn, String adgangskode, String feltnavn, Object vÃ¦rdi) {
-		db.hentBruger(brugernavn, adgangskode).ekstraFelter.put(feltnavn, vÃ¦rdi);
+	public void setEkstraFelt(String brugernavn, String adgangskode, String feltnavn, Object værdi) {
+		db.hentBruger(brugernavn, adgangskode).ekstraFelter.put(feltnavn, værdi);
 		db.gemTilFil(false);
 	}
 }

@@ -43,7 +43,7 @@ public class Brugerdatabase implements Serializable {
 				String data = new String(Files.readAllBytes(path));
 				System.out.println("Det ser ud til at du ikke har en brugerdatabase endnu.");
 				System.out.println("Jeg lÃ¦ser nu filen "+path+" og opretter en brugerdatabase fra den\n");
-				indlÃ¦sDeltagerlisteFraCampusnetHtml(data, instans.brugere);
+				indlæsDeltagerlisteFraCampusnetHtml(data, instans.brugere);
 			} catch (IOException e2) {
 				e2.printStackTrace();
 				System.err.println("Deltagerlisten mangler vist. Du kan oprette den ved at hente\n"
@@ -69,7 +69,7 @@ public class Brugerdatabase implements Serializable {
 
 
 
-	public static void indlÃ¦sDeltagerlisteFraCampusnetHtml(String data, ArrayList<Bruger> brugere) {
+	public static void indlæsDeltagerlisteFraCampusnetHtml(String data, ArrayList<Bruger> brugere) {
 		//System.out.println("data="+data);
 		for (String tr : data.split("<tr")) {
 			if (tr.contains("context_header")) continue;

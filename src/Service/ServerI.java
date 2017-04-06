@@ -36,7 +36,6 @@ public interface ServerI {
 	@WebMethod List<AbstractItem> hentResults() throws Exception;
 	@WebMethod String getFullName() throws Exception;
 	@WebMethod void addToSafe(AbstractItem item, int qty) throws Exception;
-	@WebMethod void addToResults(AbstractItem item) throws Exception;
 	@WebMethod void setFirstRun(Boolean firstRun) throws Exception;
 	@WebMethod boolean getFirstRun() throws Exception;
 	@WebMethod boolean getAdministrativ() throws Exception;
