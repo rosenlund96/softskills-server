@@ -1,7 +1,5 @@
 package Brugerautorisation.data;
 
-import Brugeraut.Diverse;
-import Brugeraut.Serialisering;
 import java.io.IOException;
 import java.io.Serializable;
 import java.nio.file.Files;
@@ -11,6 +9,9 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Scanner;
+
+import Brugerautorisation.Diverse;
+import Brugerautorisation.Serialisering;
 
 /**
  *
@@ -43,7 +44,7 @@ public class Brugerdatabase implements Serializable {
 				String data = new String(Files.readAllBytes(path));
 				System.out.println("Det ser ud til at du ikke har en brugerdatabase endnu.");
 				System.out.println("Jeg l√¶ser nu filen "+path+" og opretter en brugerdatabase fra den\n");
-				indlÊsDeltagerlisteFraCampusnetHtml(data, instans.brugere);
+				indl√¶sDeltagerlisteFraCampusnetHtml(data, instans.brugere);
 			} catch (IOException e2) {
 				e2.printStackTrace();
 				System.err.println("Deltagerlisten mangler vist. Du kan oprette den ved at hente\n"
@@ -69,7 +70,7 @@ public class Brugerdatabase implements Serializable {
 
 
 
-	public static void indlÊsDeltagerlisteFraCampusnetHtml(String data, ArrayList<Bruger> brugere) {
+	public static void indl√¶sDeltagerlisteFraCampusnetHtml(String data, ArrayList<Bruger> brugere) {
 		//System.out.println("data="+data);
 		for (String tr : data.split("<tr")) {
 			if (tr.contains("context_header")) continue;

@@ -1,6 +1,6 @@
-package Brugerautorisation.transport;
+package Brugerautorisation.transport.soap;
 
-import Brugeraut.Diverse;
+import Brugerautorisation.Diverse;
 import Brugerautorisation.data.Bruger;
 import Brugerautorisation.data.Brugerdatabase;
 import java.rmi.RemoteException;
@@ -20,7 +20,7 @@ public class BrugeradminImpl implements Brugeradmin {
 	}
 
 	@Override
-	public Bruger ÆndrAdgangskode(String brugernavn, String adgangskode, String nyAdgangskode) {
+	public Bruger Ã¦ndrAdgangskode(String brugernavn, String adgangskode, String nyAdgangskode) {
 		Bruger b = db.hentBruger(brugernavn, adgangskode);
 		b.adgangskode = nyAdgangskode;
 		db.gemTilFil(false);
@@ -50,8 +50,8 @@ public class BrugeradminImpl implements Brugeradmin {
 
 
 	@Override
-	public void setEkstraFelt(String brugernavn, String adgangskode, String feltnavn, Object værdi) {
-		db.hentBruger(brugernavn, adgangskode).ekstraFelter.put(feltnavn, værdi);
+	public void setEkstraFelt(String brugernavn, String adgangskode, String feltnavn, Object vÃ¦rdi) {
+		db.hentBruger(brugernavn, adgangskode).ekstraFelter.put(feltnavn, vÃ¦rdi);
 		db.gemTilFil(false);
 	}
 }

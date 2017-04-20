@@ -1,4 +1,4 @@
-package Brugerautorisation.transport;
+package Brugerautorisation.transport.soap;
 import Brugerautorisation.data.Bruger;
 import Brugerautorisation.data.Brugerdatabase;
 import java.util.ArrayList;
@@ -17,7 +17,7 @@ public interface Brugeradmin
 	 * Ændrer en brugers adgangskode
 	 * @return et Bruger-objekt med alle data
 	 */
-	@WebMethod Bruger �ndrAdgangskode(String brugernavn, String adgangskode, String nyAdgangskode);
+	@WebMethod Bruger ændrAdgangskode(String brugernavn, String adgangskode, String nyAdgangskode);
 
 	/**
 	 * Sender en email til en bruger
@@ -28,7 +28,7 @@ public interface Brugeradmin
 	 */
 	@WebMethod void sendEmail(String brugernavn, String adgangskode, String emne, String tekst);
 
-	@WebMethod void sendGlemtAdgangskodeEmail(String brugernavn, String f�lgetekst);
+	@WebMethod void sendGlemtAdgangskodeEmail(String brugernavn, String følgetekst);
 
 	/**
 	 * Giver mulighed for at gemme et ekstra felt for brugeren. Det kunne f.eks. være at en Galgeleg-backend ønskede at gemme hvor mange point brugeren har, til en highscoreliste
@@ -37,7 +37,7 @@ public interface Brugeradmin
 	 * @param værdi Værdien er et vilkårligt objekt, f.eks. 223 (Integer) eller "223" (String)
 	 * @throws java.rmi.RemoteException
 	 */
-	@WebMethod void setEkstraFelt(String brugernavn, String adgangskode, String feltnavn, Object v�rdi);
+	@WebMethod void setEkstraFelt(String brugernavn, String adgangskode, String feltnavn, Object værdi);
 
 	/**
 	 * Aflæser et ekstra felt. Se setEkstraFelt

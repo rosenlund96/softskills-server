@@ -147,7 +147,7 @@ public class Safe {
      * This method gets an unused item from the safe *
      ********************************************/
 
-    public List<AbstractItem> læsUnusedItems() {
+    public List<AbstractItem> lÃ¦sUnusedItems() {
         ArrayList<AbstractItem> res = new ArrayList<>();
         res.addAll(unusedBelbinItems);
         res.addAll(unusedDiscItems);
@@ -162,7 +162,7 @@ public class Safe {
 
 
 
-    public void sætUnusedItems(List<AbstractItem> Unused){
+    public void sÃ¦tUnusedItems(List<AbstractItem> Unused){
        for (int i = 0; i < Unused.size();i++){
             switch (Unused.get(i).getTestType()){
                 case DISC:
@@ -186,7 +186,7 @@ public class Safe {
     }
 
 
-    public void sætUsedItems(List<AbstractItem> used){
+    public void sÃ¦tUsedItems(List<AbstractItem> used){
         for (int i = 0; i < used.size();i++){
             switch (used.get(i).getTestType()){
                 case DISC:
@@ -224,7 +224,7 @@ public class Safe {
 
 
     public int getSafeSize(){
-        return læsUnusedItems().size();
+        return lÃ¦sUnusedItems().size();
     }
 
 

@@ -1,4 +1,4 @@
-package Brugerautorisation.transport;
+package Brugerautorisation.transport.soap;
 
 import Brugerautorisation.data.Brugerdatabase;
 import javax.xml.ws.Endpoint;

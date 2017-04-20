@@ -15,7 +15,7 @@ import Entities.Group;
 import Entities.Safe;
 import Entities.User;
 import Brugerautorisation.data.Bruger;
-import Brugerautorisation.transport.Brugeradmin;
+import Brugerautorisation.transport.soap.Brugeradmin;
 
 
 @WebService(endpointInterface = "Service.ServerI")
@@ -32,7 +32,7 @@ public class Servermanager {
 		
 	}
 	
-	public User login(String bruger, String adgangskode) throws Exception {
+	public boolean login(String bruger, String adgangskode) throws Exception {
         URL url = new URL("http://javabog.dk:9901/brugeradmin?wsdl");
         QName qname = new QName("http://soap.transport.brugerautorisation/", "BrugeradminImplService");
         Service service = Service.create(url, qname);
@@ -41,11 +41,11 @@ public class Servermanager {
         try {
     b = ba.hentBruger(bruger, adgangskode);
 } catch (Throwable e) {
-    return null;
+    return false;
 }
-    current = new User(b.getName(),b.getLastname(),b.getMail(),b.getRetning());
     
-    return current;
+    
+    return true;
 }
 	
 	//All methods from Groupmanager//

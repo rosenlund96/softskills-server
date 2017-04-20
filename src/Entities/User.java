@@ -101,7 +101,7 @@ public class User {
 
     public List<AbstractItem> retrieveSafeObjects() {
 
-        return safe.læsUnusedItems();
+        return safe.lÃ¦sUnusedItems();
     }
 
     /*****************************

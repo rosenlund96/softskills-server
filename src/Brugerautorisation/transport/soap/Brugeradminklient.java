@@ -1,6 +1,6 @@
-package Brugerautorisation.transport;
+package Brugerautorisation.transport.soap;
 
-import Brugeraut.Diverse;
+import Brugerautorisation.Diverse;
 import Brugerautorisation.data.Bruger;
 import java.net.MalformedURLException;
 import java.net.URL;
